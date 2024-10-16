@@ -1,0 +1,40 @@
+﻿@using EntityLayer.Concrete
+
+@model Experience
+@{
+    ViewData["Title"] = "AddExperience";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+
+
+<br />
+<br />
+
+<br />
+<h1>Deneyim Ekle</h1>
+
+@using (Html.BeginForm("addExperience", "Experience", FormMethod.Post))
+{
+    @Html.Label("Deneyim Başlığı")
+    @Html.TextBoxFor(x => x.Name,new {@class="form-control"})
+
+    <br />
+    <label>
+Tarih Bilgisi    </label>
+
+    @Html.TextBoxFor(x => x.Date,new {@class="form-control"})
+    <br />
+    <label> Resim Yolu </label>
+    @Html.TextBoxFor(x => x.ImageUrl,new {@class="form-control"})
+    <br />
+    <label> Açıklama </label>   
+
+    @Html.TextAreaFor(x => x.Description,10,3,new {@class="form-control"})
+    <br />
+
+
+
+    <button class="btn btn-primary">Kaydet</button>
+}

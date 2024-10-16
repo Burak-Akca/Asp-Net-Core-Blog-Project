@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "AdminMessageSend";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<br />
+<br />
+
+<br />
+
+<form class="form-group" method="post">
+    <label>Konu</label>
+    <input type="text" name="Subject" class="form-control" />
+    <br />
+    <label>
+        Alıcı
+    </label>
+    <input type="email" name="Receiver" class="form-control" />
+    <br />
+    <label>
+        Mesaj
+    </label>
+    <input type="text" name="Content" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Gönder</button>
+</form>
